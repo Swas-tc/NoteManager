@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header>
+            <div class="logo-area">
+                <i class="fa-solid fa-layer-group logo-icon"></i>
+                <h1>Notes Manager</h1>
+            </div>
+            <p class="subtitle">Designed by Sarwash Shwet</p>
+        </header>
+
+        <div class="input-container glass-panel">
+            <div id="error-message" class="error-msg"></div>
+            <textarea id="note-input" placeholder="What's on your mind today?"></textarea>
+            
+            <div class="action-bar">
+                <button id="add-btn" onclick="addNote()">
+                    <i class="fa-solid fa-plus"></i> Create Note
+                </button>
+                <button id="update-btn" onclick="updateNote()" style="display: none;">
+                    <i class="fa-solid fa-rotate"></i> Update Note
+                </button>
+            </div>
+        </div>
+
+        <div class="divider">
+            <span>YOUR NOTES</span>
+        </div>
+
+        <div id="notes-container" class="notes-grid">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
